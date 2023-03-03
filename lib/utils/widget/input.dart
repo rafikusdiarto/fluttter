@@ -25,14 +25,14 @@ class InputField extends StatelessWidget {
         style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.white, width: 2),
+                borderSide: BorderSide(color: Colors.amber, width: 2),
                 borderRadius: BorderRadius.circular(7.0)),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(7),
                 borderSide: BorderSide(color: Colors.white70)),
             labelText: label,
             labelStyle: TextStyle(color: Colors.grey[400]),
-            hintText: hintText,
+            hintText: hint ? hintText : "",
             hintStyle: TextStyle(color: Colors.grey[400])),
       ),
     );
