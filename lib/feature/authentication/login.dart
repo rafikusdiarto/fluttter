@@ -60,7 +60,7 @@ class LoginPage extends StatelessWidget {
                                 color: Colors.amber.withOpacity(0.3),
                                 spreadRadius: -3,
                                 blurRadius: 7,
-                                offset: Offset(7, 7))
+                                offset: const Offset(7, 7))
                           ],
                           color: Colors.grey[900],
                           borderRadius: BorderRadius.circular(25)),
@@ -83,13 +83,17 @@ class LoginPage extends StatelessWidget {
                           Align(
                               alignment: Alignment.centerRight,
                               child: Padding(
-                                padding: EdgeInsets.only(right: 10),
+                                padding: const EdgeInsets.only(right: 10),
                                 child: Text(
                                   "Forgot Password?",
                                   textAlign: TextAlign.start,
                                   style: TextStyle(color: Colors.grey[200]),
                                 ),
-                              ))
+                              )),
+                          TextButton(
+                            child: const Text("Signin"),
+                            onPressed: () => {},
+                          )
                         ],
                       ))
                 ])));
