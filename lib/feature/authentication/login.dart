@@ -91,6 +91,10 @@ class LoginPage extends StatelessWidget {
                                 ),
                               )),
                           TextButton(
+                            style: const ButtonStyle(
+                                backgroundColor:
+                                    MaterialStatePropertyAll<Color>(
+                                        Colors.amber)),
                             child: const Text("Signin"),
                             onPressed: () => {},
                           )
