@@ -18,8 +18,8 @@ class LoginPage extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage('lib/data/local/assets/images/bg.jpg')),
-              // border: Border.all(color: Colors.white10),
+                  image: AssetImage(
+                      'lib/data/local/assets/images/bg.jpg')), // border: Border.all(color: Colors.white10),
             ),
             child: Column(
                 // mainAxisAlignment: MainAxisAlignment.start,
@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
                       mainAxisSize: MainAxisSize.max,
                       children: const <Widget>[
                         Padding(
-                          padding: EdgeInsets.only(top: 25),
+                          padding: EdgeInsets.only(top: 50),
                           child: Image(
                             image: AssetImage(
                                 'lib/data/local/assets/images/fluttericon.png'),
@@ -79,7 +79,17 @@ class LoginPage extends StatelessWidget {
                               hintText: "password",
                               label: "password",
                               obsecureText: true,
-                              controller: passwordController)
+                              controller: passwordController),
+                          Align(
+                              alignment: Alignment.centerRight,
+                              child: Padding(
+                                padding: EdgeInsets.only(right: 10),
+                                child: Text(
+                                  "Forgot Password?",
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(color: Colors.grey[200]),
+                                ),
+                              ))
                         ],
                       ))
                 ])));
