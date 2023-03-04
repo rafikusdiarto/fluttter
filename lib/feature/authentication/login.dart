@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/widget/input.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 // import 'package:flutter/material.dart';
 // import 'package:login/home_page.dart';
 
@@ -90,13 +91,71 @@ class LoginPage extends StatelessWidget {
                                   style: TextStyle(color: Colors.grey[200]),
                                 ),
                               )),
+                          const Padding(
+                              padding: EdgeInsets.only(top: 20, bottom: 20)),
                           TextButton(
-                            style: const ButtonStyle(
+                            style: ButtonStyle(
+                                textStyle: MaterialStateProperty.all<TextStyle>(
+                                    const TextStyle(color: Colors.white)),
+                                // side: MaterialStateProperty.all<BorderSide>(BorderSide()), /
+                                shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                            25))), // elevation: MaterialStateProperty.all(),
+                                padding: MaterialStateProperty.all<EdgeInsets>(
+                                    const EdgeInsets.only(left: 50, right: 50)),
                                 backgroundColor:
-                                    MaterialStatePropertyAll<Color>(
+                                    const MaterialStatePropertyAll<Color>(
                                         Colors.amber)),
-                            child: const Text("Signin"),
+                            child: const Text(
+                              "Sign In",
+                              style: TextStyle(color: Colors.white),
+                            ),
                             onPressed: () => {},
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10, bottom: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                IconButton(
+                                    iconSize: 42,
+                                    onPressed: () {},
+                                    icon: SvgPicture.asset(
+                                        "lib/data/local/assets/images/google.svg",
+                                        colorFilter: const ColorFilter.mode(
+                                            Colors.white, BlendMode.srcIn),
+                                        semanticsLabel: 'Label')),
+                                IconButton(
+                                    iconSize: 42,
+                                    onPressed: () {},
+                                    icon: SvgPicture.asset(
+                                        "lib/data/local/assets/images/facebook.svg",
+                                        // color: Colors.black,
+                                        // colorFilter: ColorFilter.mode(
+                                        //     Colors.white, BlendMode.darken),
+                                        semanticsLabel: 'Label')),
+                                IconButton(
+                                    iconSize: 42,
+                                    onPressed: () {},
+                                    icon: SvgPicture.asset(
+                                        "lib/data/local/assets/images/github.svg",
+                                        colorFilter: const ColorFilter.mode(
+                                            Colors.white, BlendMode.srcIn),
+                                        semanticsLabel: 'Label')),
+                              ],
+                            ),
+                          ),
+
+                          // ignore: prefer_const_constructors
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10, bottom: 10),
+                            child: const Text(
+                              "Don't have account? Sign Up",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
                           )
                         ],
                       ))
