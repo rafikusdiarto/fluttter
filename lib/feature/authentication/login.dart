@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/feature/authentication/register.dart';
 import 'package:flutter_application_1/utils/widget/input.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 // import 'package:flutter/material.dart';
 // import 'package:login/home_page.dart';
 
@@ -147,16 +148,38 @@ class LoginPage extends StatelessWidget {
                               ],
                             ),
                           ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.only(top: 10, bottom: 10),
+                                child: Text(
+                                  "Don't have account?",
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.white),
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              InkWell(
+                                child: const Text(
+                                  "Sign Up",
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.white),
+                                ),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              RegisterPage()));
+                                },
+                              )
+                            ],
+                          )
 
                           // ignore: prefer_const_constructors
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10, bottom: 10),
-                            child: const Text(
-                              "Don't have account? Sign Up",
-                              style:
-                                  TextStyle(fontSize: 12, color: Colors.white),
-                            ),
-                          )
                         ],
                       ))
                 ])));
